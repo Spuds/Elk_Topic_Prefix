@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "https://www.elkarte.net/site/package-info">
+<package-info xmlns="https://www.elkarte.net/site/package-info" xmlns:elk="https://www.elkarte.net/">
+	<license><![CDATA[
+/**
+ * Topics Prefix
+ *
+ * @author  emanuele
+ * @license BSD http://opensource.org/licenses/BSD-3-Clause
+ *
+ * @version 0.0.5
+ */
+	]]></license>
+	<id>emanuele:TopicsPrefix</id>
+	<name>Topics Prefix</name>
+	<version>0.0.5</version>
+	<type>modification</type>
+	<install for="1.0 - 1.1.99">
+		<modification>modifications.xml</modification>
+		<require-file name="Sources/TopicPrefix.integrate.php" destination="SOURCEDIR" />
+		<require-file name="Sources/admin/ManagePrefix.controller.php" destination="ADMINDIR" />
+		<require-file name="Sources/controller/Prefix.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Sources/subs/TopicPrefix.class.php" destination="SUBSDIR" />
+		<require-file name="Sources/subs/TopicPrefixPxCRUD.class.php" destination="SUBSDIR" />
+		<require-file name="Sources/subs/TopicPrefixTcCRUD.class.php" destination="SUBSDIR" />
+		<require-file name="Sources/subs/TopicPrefix.subs.php" destination="SUBSDIR" />
+		<require-file name="Themes/TopicPrefix.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Themes/TopicPrefix.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/TopicPrefix.js" destination="THEMEDIR/scripts" />
+		<require-file name="Themes/TopicPrefix.css" destination="THEMEDIR/css" />
+		<require-file name="Prefix/StylePicker.class.php" destination="SUBSDIR/Prefix" />
+		<require-file name="Prefix/StylePicker.english.php" destination="LANGUAGEDIR/english/Prefix" />
+		<require-file name="Prefix/StylePicker.template.php" destination="THEMEDIR/Prefix" />
+		<code>install.php</code>
+		<redirect url="index.php?action=admin;area=postsettings;sa=prefix" timeout="3000" />
+	</install>
+	<uninstall for="1.0 - 1.1.99">
+		<modification reverse="true">modifications.xml</modification>
+		<remove-file name="SOURCEDIR/TopicPrefix.integrate.php" />
+		<remove-file name="ADMINDIR/ManagePrefix.controller.php" />
+		<remove-file name="CONTROLLERDIR/Prefix.controller.php" />
+		<remove-file name="SUBSDIR/TopicPrefix.class.php" />
+		<remove-file name="SUBSDIR/TopicPrefixPxCRUD.class.php" />
+		<remove-file name="SUBSDIR/TopicPrefixTcCRUD.class.php" />
+		<remove-file name="SUBSDIR/TopicPrefix.subs.php" />
+		<remove-file name="LANGUAGEDIR/english/TopicPrefix.english.php" />
+		<remove-file name="THEMEDIR/TopicPrefix.template.php" />
+		<remove-file name="THEMEDIR/css/TopicPrefix.css" />
+		<remove-file name="THEMEDIR/scripts/TopicPrefix.js" />
+		<remove-file name="SUBSDIR/Prefix/StylePicker.class.php" />
+		<remove-file name="LANGUAGEDIR/english/Prefix/StylePicker.english.php" />
+		<remove-file name="THEMEDIR/Prefix/StylePicker.template.php" />
+		<code>install.php</code>
+	</uninstall>
+</package-info>
